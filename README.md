@@ -1,7 +1,3 @@
-Claro! Aqui está um exemplo de README inicial para o projeto MyWorkflowCLI:
-
----
-
 # MyWorkflowCLI
 
 MyWorkflowCLI é uma interface de linha de comando (CLI) personalizada criada com .NET. Esta ferramenta permite executar e gerenciar comandos pré-configurados de maneira simples e eficiente diretamente do terminal.
