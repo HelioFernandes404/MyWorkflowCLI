@@ -87,5 +87,3 @@ Contribuições são bem-vindas! Sinta-se à vontade para abrir issues ou enviar
 Este projeto está licenciado sob a licença MIT. Veja o arquivo `LICENSE` para mais detalhes.
 
 ---
-
-Com este README, qualquer desenvolvedor pode começar a usar e contribuir para o projeto MyWorkflowCLI.
