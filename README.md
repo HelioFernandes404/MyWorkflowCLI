@@ -4,6 +4,23 @@ MyWorkflowCLI é uma interface de linha de comando (CLI) personalizada criada co
 
 ## Instalação
 
+#### Linux
+
+```sh
+nano ~/.bashrc
+```
+
+```sh
+export CAMINHO_MEUPROJETO="/mnt/c/Users/helio/projetos/my_cli/MyWorkflow/bin/Release/net8.0/linux-x64/publish/"
+alias myworkflow='$CAMINHO_MEUPROJETO/myworkflow'
+```
+
+```sh
+source ~/.bashrc
+```
+
+Agora, você pode simplesmente digitar myworkflow docker all no terminal para executar os comandos do seu projeto CLI.
+
 ### Pré-requisitos
 
 - .NET SDK 6.0 ou superior
@@ -12,56 +29,56 @@ MyWorkflowCLI é uma interface de linha de comando (CLI) personalizada criada co
 
 1. Clone o repositório:
 
-    ```bash
-    git clone https://github.com/seu-usuario/MyWorkflowCLI.git
-    cd MyWorkflowCLI
-    ```
+   ```bash
+   git clone https://github.com/seu-usuario/MyWorkflowCLI.git
+   cd MyWorkflowCLI
+   ```
 
 2. Compile o projeto:
 
-    ```bash
-    dotnet build
-    ```
+   ```bash
+   dotnet build
+   ```
 
 3. (Opcional) Publique o projeto para uso global:
 
-    ```bash
-    dotnet publish -c Release -r win-x64 --self-contained
-    ```
+   ```bash
+   dotnet publish -c Release -r win-x64 --self-contained
+   ```
 
-    Adicione a pasta `publish` ao seu `PATH` ou mova o executável para um local acessível globalmente.
+   Adicione a pasta `publish` ao seu `PATH` ou mova o executável para um local acessível globalmente.
 
 ## Uso
 
 ### Comandos Disponíveis
 
 - **Ajuda Geral**:
-    
-    ```bash
-    myworkflow -h
-    ```
+
+  ```bash
+  myworkflow -h
+  ```
 
 - **Comandos Docker**:
 
-    Para ver todos os comandos Docker disponíveis:
+  Para ver todos os comandos Docker disponíveis:
 
-    ```bash
-    myworkflow docker all
-    ```
+  ```bash
+  myworkflow docker all
+  ```
 
 ### Exemplos
 
 - Para ver a ajuda geral:
 
-    ```bash
-    myworkflow -h
-    ```
+  ```bash
+  myworkflow -h
+  ```
 
 - Para listar todos os comandos Docker disponíveis:
 
-    ```bash
-    myworkflow docker all
-    ```
+  ```bash
+  myworkflow docker all
+  ```
 
 ## Estrutura do Projeto
 
