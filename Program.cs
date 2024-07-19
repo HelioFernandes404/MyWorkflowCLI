@@ -36,13 +36,15 @@ class Program
 
   static void ShowHelp()
   {
-    Console.WriteLine("Uso: myworkflow [comando] [opções]");
+    Console.WriteLine("Uso: myworkflow [modulo] [opções]");
     Console.WriteLine();
     Console.WriteLine("Comandos disponíveis:");
     Console.WriteLine("  -h, --help       Mostra a ajuda");
     Console.WriteLine("  docker           Comandos relacionados ao Docker");
+    Console.WriteLine("  linux            Comandos relacionados ao Linux");
+    Console.WriteLine("  psql             Comandos relacionados ao Psql");
     Console.WriteLine();
-    Console.WriteLine("Para mais informações sobre um comando, use: myworkflow [comando] --help");
+    Console.WriteLine("Para mais informações sobre um comando, use: myworkflow [modulo] --help");
   }
 
 }
