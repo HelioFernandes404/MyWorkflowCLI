@@ -28,6 +28,9 @@ class Program
       case "psql":
         PSQL.HandleSqlCommands(args);
         break;
+      case "pmc":
+        PMC.HandlePmcCommands(args);
+        break;
       default:
         Console.WriteLine("Comando não reconhecido. Use '-h' ou '--help' para ver os comandos disponíveis.");
         break;
@@ -43,6 +46,7 @@ class Program
     Console.WriteLine("  docker           Comandos relacionados ao Docker");
     Console.WriteLine("  linux            Comandos relacionados ao Linux");
     Console.WriteLine("  psql             Comandos relacionados ao Psql");
+    Console.WriteLine("  pmc              Comandos relacionados ao (pmc)Package Manager Console");
     Console.WriteLine();
     Console.WriteLine("Para mais informações sobre um comando, use: myworkflow [modulo] --help");
   }
