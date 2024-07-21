@@ -31,6 +31,9 @@ class Program
       case "pmc":
         PMC.HandlePmcCommands(args);
         break;
+      case "git":
+        Git.HandleGitCommands(args);
+        break;
       default:
         Console.WriteLine("Comando não reconhecido. Use '-h' ou '--help' para ver os comandos disponíveis.");
         break;
@@ -47,6 +50,7 @@ class Program
     Console.WriteLine("  linux            Comandos relacionados ao Linux");
     Console.WriteLine("  psql             Comandos relacionados ao Psql");
     Console.WriteLine("  pmc              Comandos relacionados ao (pmc)Package Manager Console");
+    Console.WriteLine("  git              Comandos relacionados ao Git");
     Console.WriteLine();
     Console.WriteLine("Para mais informações sobre um comando, use: myworkflow [modulo] --help");
   }
