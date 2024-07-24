@@ -34,6 +34,9 @@ class Program
       case "git":
         Git.HandleGitCommands(args);
         break;
+      case "docs":
+        Docs.HandleDocsCommands(args);
+        break;
       default:
         Console.WriteLine("Comando não reconhecido. Use '-h' ou '--help' para ver os comandos disponíveis.");
         break;
