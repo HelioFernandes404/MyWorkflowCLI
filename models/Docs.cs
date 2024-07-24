@@ -30,6 +30,7 @@ public class Docs
     Console.WriteLine("Comandos Docs disponíveis:");
     Console.WriteLine("  all              Mostra todos os comandos Docs disponíveis");
     Console.WriteLine();
+    ShowDocs();
   }
 
   public static void ShowDocs()

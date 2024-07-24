@@ -35,6 +35,7 @@
       Console.WriteLine("  all              Mostra todos os comandos Docker disponíveis");
       Console.WriteLine("  delete           Mostra todos os comandos Docker de deletar");
       Console.WriteLine();
+      ShowAllDockerCommands();
     }
 
     public static void ShowAllDockerCommands()

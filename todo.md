@@ -1,8 +1,31 @@
+# 1. 
+
 [ x ] - Comandos mais usados : Linux
 [ x ] - Comandos mais usados : Docker
 [ x ] - Comandos mais usados : PSQL Command
-[ ] - When using the Package Manager Console (PMC)
-[ ] - When using the .NET Command Line Interface (.NET CLI)
-[ ] - Git
-[ ] - Docs ?
+[ x ] - When using the Package Manager Console (PMC)
+[ x ] - When using the .NET Command Line Interface (.NET CLI)
+[ x ] - Git
+[ x ] - Docs ?
  
+# 2. passar o projeto pra padrões de design / Factory Method ?
+
+
+```
+myworkflow/
+├── src/
+│   ├── Program.cs
+│   ├── Commands/
+│   │   ├── DockerCommand.cs
+│   │   ├── LinuxCommand.cs
+│   │   ├── PsqlCommand.cs
+│   │   ├── PmcCommand.cs
+│   │   ├── GitCommand.cs
+│   │   ├── DocsCommand.cs
+│   └── Utils/
+│       ├── CommandFactory.cs
+│       ├── ICommand.cs
+├── bin/
+├── obj/
+└── README.md
+```
