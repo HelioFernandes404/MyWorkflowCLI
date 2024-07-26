@@ -1,31 +1,15 @@
-﻿using System;
-using MyWorkflow.Utils;
+﻿using MyWorkflow.Utils;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace MyWorkflow
+namespace MyWorkflow.Commands
 {
-    class Program
+    public class HelpCommand : ICommand
     {
-        static void Main(string[] args)
-        {
-            if (args.Length == 0)
-            {
-                ShowHelp();
-                return;
-            }
-
-            string command = args[0].ToLower();
-            ICommand commandHandler = CommandFactory.CreateCommand(command);
-
-            if (commandHandler == null)
-            {
-                Console.WriteLine("Comando não reconhecido. Use '-h' ou '--help' para ver os comandos disponíveis.");
-                return;
-            }
-
-            commandHandler.Execute(args);
-        }
-
-        static void ShowHelp()
+        public void Execute(string[] args)
         {
             Console.WriteLine("Uso: myworkflow [modulo] [opções]");
             Console.WriteLine();
