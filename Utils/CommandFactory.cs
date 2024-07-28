@@ -21,8 +21,10 @@ namespace MyWorkflow.Utils
                 "pmc" => new PmcCommand(),
                 "git" => new GitCommand(),
                 "docs" => new DocsCommand(),
-                _ => null,
+                _ => new DefaultCommand(),
             };
         }
     }
 }
+
+

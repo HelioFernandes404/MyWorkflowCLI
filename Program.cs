@@ -36,6 +36,7 @@ namespace MyWorkflow
             Console.WriteLine("  psql             Comandos relacionados ao Psql");
             Console.WriteLine("  pmc              Comandos relacionados ao (pmc)Package Manager Console");
             Console.WriteLine("  git              Comandos relacionados ao Git");
+            Console.WriteLine("  vs               Comandos relacionados ao Visual Studio");
             Console.WriteLine();
             Console.WriteLine("Para mais informações sobre um comando, use: myworkflow [modulo] --help");
         }
