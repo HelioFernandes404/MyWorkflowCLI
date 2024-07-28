@@ -10,8 +10,6 @@ namespace MyWorkflow
             Console.WriteLine("Executando comandos Linux...");
 
 
-            static void HandleLinuxCommands(string[] args)
-            {
                 if (args.Length < 2 || args[1] == "--help")
                 {
                     ShowLinuxHelp();
@@ -28,7 +26,7 @@ namespace MyWorkflow
                         Console.WriteLine("Comando linux não reconhecido. Use 'myworkflow linux --help' para ver os comandos disponíveis.");
                         break;
                 }
-            }
+            
 
             static void ShowLinuxHelp()
             {

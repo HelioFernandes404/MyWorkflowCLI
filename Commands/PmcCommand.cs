@@ -6,8 +6,8 @@ namespace MyWorkflow.Commands
     {
         public void Execute(string[] args)
         {
-             static void HandlePmcCommands(string[] args)
-            {
+            
+            
                 if (args.Length < 2 || args[1] == "--help")
                 {
                     ShowPmcHelp();
@@ -30,7 +30,7 @@ namespace MyWorkflow.Commands
                         Console.WriteLine("Comando PMC não reconhecido. Use 'myworkflow pmc --help' para ver os comandos disponíveis.");
                         break;
                 }
-            }
+            
 
              static void ShowPmcHelp()
             {

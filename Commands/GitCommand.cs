@@ -7,8 +7,7 @@ namespace MyWorkflow.Commands
 
         public void Execute(string[] args)
         {
-             static void HandleGitCommands(string[] args)
-            {
+        
                 if (args.Length < 2 || args[1] == "--help")
                 {
                     ShowGitHelp();
@@ -25,7 +24,7 @@ namespace MyWorkflow.Commands
                         Console.WriteLine("Comando Git não reconhecido. Use 'myworkflow Git --help' para ver os comandos disponíveis.");
                         break;
                 }
-            }
+            
 
              static void ShowGitHelp()
             {
