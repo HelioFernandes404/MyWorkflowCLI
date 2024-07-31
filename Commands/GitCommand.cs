@@ -7,26 +7,26 @@ namespace MyWorkflow.Commands
 
         public void Execute(string[] args)
         {
-        
-                if (args.Length < 2 || args[1] == "--help")
-                {
-                    ShowGitHelp();
-                    return;
-                }
 
-                string GitCommand = args[1].ToLower();
-                switch (GitCommand)
-                {
-                    case "all":
-                        ShowTop10GitCommands();
-                        break;
-                    default:
-                        Console.WriteLine("Comando Git não reconhecido. Use 'myworkflow Git --help' para ver os comandos disponíveis.");
-                        break;
-                }
-            
+            if (args.Length < 2 || args[1] == "--help")
+            {
+                ShowGitHelp();
+                return;
+            }
 
-             static void ShowGitHelp()
+            string GitCommand = args[1].ToLower();
+            switch (GitCommand)
+            {
+                case "all":
+                    ShowTop10GitCommands();
+                    break;
+                default:
+                    Console.WriteLine("Comando Git não reconhecido. Use 'myworkflow Git --help' para ver os comandos disponíveis.");
+                    break;
+            }
+
+
+            static void ShowGitHelp()
             {
                 Console.WriteLine();
                 Console.WriteLine("Uso: myworkflow Git [comando]");
@@ -36,7 +36,7 @@ namespace MyWorkflow.Commands
                 Console.WriteLine();
             }
 
-             static void ShowTop10GitCommands()
+            static void ShowTop10GitCommands()
             {
                 Console.WriteLine();
                 Console.WriteLine("Os 10 comandos Git mais usados:");
@@ -54,7 +54,7 @@ namespace MyWorkflow.Commands
             }
         }
 
-        
+
 
     }
 }

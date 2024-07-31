@@ -10,23 +10,23 @@ namespace MyWorkflow
             Console.WriteLine("Executando comandos Linux...");
 
 
-                if (args.Length < 2 || args[1] == "--help")
-                {
-                    ShowLinuxHelp();
-                    return;
-                }
+            if (args.Length < 2 || args[1] == "--help")
+            {
+                ShowLinuxHelp();
+                return;
+            }
 
-                string dockerCommand = args[1].ToLower();
-                switch (dockerCommand)
-                {
-                    case "all":
-                        ShowAllLinuxCommands();
-                        break;
-                    default:
-                        Console.WriteLine("Comando linux não reconhecido. Use 'myworkflow linux --help' para ver os comandos disponíveis.");
-                        break;
-                }
-            
+            string dockerCommand = args[1].ToLower();
+            switch (dockerCommand)
+            {
+                case "all":
+                    ShowAllLinuxCommands();
+                    break;
+                default:
+                    Console.WriteLine("Comando linux não reconhecido. Use 'myworkflow linux --help' para ver os comandos disponíveis.");
+                    break;
+            }
+
 
             static void ShowLinuxHelp()
             {

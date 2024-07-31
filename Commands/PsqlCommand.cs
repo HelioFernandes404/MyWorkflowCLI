@@ -8,8 +8,6 @@ namespace MyWorkflow.Commands
 
         public void Execute(string[] args)
         {
-
-
             if (args.Length < 2 || args[1] == "--help")
             {
                 ShowSqlHelp();

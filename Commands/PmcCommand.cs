@@ -6,33 +6,31 @@ namespace MyWorkflow.Commands
     {
         public void Execute(string[] args)
         {
-            
-            
-                if (args.Length < 2 || args[1] == "--help")
-                {
-                    ShowPmcHelp();
-                    return;
-                }
+            if (args.Length < 2 || args[1] == "--help")
+            {
+                ShowPmcHelp();
+                return;
+            }
 
-                string pmcCommand = args[1].ToLower();
-                switch (pmcCommand)
-                {
-                    case "all":
-                        ShowTop10PmcCommands();
-                        break;
-                    case "delete":
-                        ShowDeletePmcCommands();
-                        break;
-                    case "efc":
-                        ShowEfcPmcCommands();
-                        break;
-                    default:
-                        Console.WriteLine("Comando PMC não reconhecido. Use 'myworkflow pmc --help' para ver os comandos disponíveis.");
-                        break;
-                }
-            
+            string pmcCommand = args[1].ToLower();
+            switch (pmcCommand)
+            {
+                case "all":
+                    ShowTop10PmcCommands();
+                    break;
+                case "delete":
+                    ShowDeletePmcCommands();
+                    break;
+                case "efc":
+                    ShowEfcPmcCommands();
+                    break;
+                default:
+                    Console.WriteLine("Comando PMC não reconhecido. Use 'myworkflow pmc --help' para ver os comandos disponíveis.");
+                    break;
+            }
 
-             static void ShowPmcHelp()
+
+            static void ShowPmcHelp()
             {
                 Console.WriteLine();
                 Console.WriteLine("Uso: myworkflow pmc [comando]");
@@ -44,7 +42,7 @@ namespace MyWorkflow.Commands
                 Console.WriteLine();
             }
 
-             static void ShowTop10PmcCommands()
+            static void ShowTop10PmcCommands()
             {
                 Console.WriteLine();
                 Console.WriteLine("Os 10 comandos PMC mais usados:");
@@ -61,7 +59,7 @@ namespace MyWorkflow.Commands
                 Console.WriteLine();
             }
 
-             static void ShowDeletePmcCommands()
+            static void ShowDeletePmcCommands()
             {
                 Console.WriteLine();
                 Console.WriteLine("Comandos PMC de deletar:");
@@ -75,7 +73,7 @@ namespace MyWorkflow.Commands
                 Console.WriteLine();
             }
 
-             static void ShowEfcPmcCommands()
+            static void ShowEfcPmcCommands()
             {
                 Console.WriteLine();
                 Console.WriteLine("Comandos PMC de Entity Framework Core (EFC):");
@@ -92,10 +90,6 @@ namespace MyWorkflow.Commands
             }
 
         }
-
-
-
-
     }
 }
 
