@@ -11,7 +11,9 @@
 
 [ ] - IA CLI
 [ ] - padrao de commits
- 
+[ ] - CommitsPattern
+
+
 # 2. passar o projeto pra padrões de design / Factory Method ?
 
 
