@@ -1,4 +1,4 @@
-# 1. 
+# 1. Todo
 
 [ x ] - Comandos mais usados : Linux
 [ x ] - Comandos mais usados : Docker
