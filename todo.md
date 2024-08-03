@@ -8,6 +8,7 @@
 [ x ] - Git
 [ x ] - Docs ?
 [ x ] - visual studio
+[ ] - MongoDB Shell
 
 [ ] - IA CLI
 [ ] - padrao de commits
