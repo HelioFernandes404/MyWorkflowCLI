@@ -7,8 +7,9 @@
 [ x ] - When using the .NET Command Line Interface (.NET CLI)
 [ x ] - Git
 [ x ] - Docs ?
-[ x ] - visual studio
+[ x ] - visual studio //TODO: Atualizar
 [ ] - MongoDB Shell
+
 
 [ ] - IA CLI
 [ ] - padrao de commits
