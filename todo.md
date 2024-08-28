@@ -8,7 +8,7 @@
 [ x ] - Git
 [ x ] - Docs ?
 [ x ] - visual studio //TODO: Atualizar
-[ ] - MongoDB Shell
+[ ]  - MongoDB Shell
 
 
 [ ] - IA CLI
