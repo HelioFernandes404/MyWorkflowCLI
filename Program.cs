@@ -38,7 +38,7 @@ namespace MyWorkflow
             Console.WriteLine("  git              Comandos relacionados ao Git");
             Console.WriteLine("  vs               Comandos relacionados ao Visual Studio");
             Console.WriteLine("  mongoshell       Comandos relacionados ao mongoshell");
-            Console.WriteLine("  CP               Comandos relacionados ao Commits Pattern");
+            Console.WriteLine("  cp               Comandos relacionados ao Commits Pattern");
             Console.WriteLine();
             Console.WriteLine("Para mais informações sobre um comando, use: myworkflow [modulo] --help");
         }
