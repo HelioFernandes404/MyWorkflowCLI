@@ -12,8 +12,8 @@ public class DocsCommand : ICommand
             return;
         }
 
-        var GitCommand = args[1].ToLower();
-        switch (GitCommand)
+        var gitCommand = args[1].ToLower();
+        switch (gitCommand)
         {
             case "all":
                 ShowDocs();

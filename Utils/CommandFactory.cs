@@ -17,6 +17,7 @@ namespace MyWorkflow.Utils
                 "git" => new GitCommand(),
                 "docs" => new DocsCommand(),
                 "vs" => new VsCommand(),
+                "mongoshell" => new MongoDbShell(),
                 _ => new DefaultCommand(),
             };
         }
