@@ -14,12 +14,12 @@ public class VsCommand : ICommand
         switch (VsCommand)
         {
             case "all":
-                AllVs();
+                BasicCommands();
                 break;
             default:
                 Console.WriteLine(
                     "Comando Vscode não reconhecido. Use 'myworkflow Vs --help' para ver os comandos disponíveis.");
-                AllVs();
+                BasicCommands();
                 break;
         }
     }
@@ -35,7 +35,7 @@ public class VsCommand : ICommand
         Console.WriteLine("  all              Mostra todos os comandos Vs disponíveis");
     }
 
-    private static void AllVs()
+    private static void BasicCommands()
     {
         Console.WriteLine();
         Console.WriteLine("Comandos úteis da IDE:");

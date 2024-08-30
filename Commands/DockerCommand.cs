@@ -16,7 +16,7 @@ public class DockerCommand : ICommand
         switch (dockerCommand)
         {
             case "all":
-                ShowAllDockerCommands();
+                BasicCommands();
                 break;
             case "delete":
                 ShowDeleteDockerCommands();
@@ -37,10 +37,10 @@ public class DockerCommand : ICommand
             Console.WriteLine("  all              Mostra todos os comandos Docker disponíveis");
             Console.WriteLine("  delete           Mostra todos os comandos Docker de deletar");
             Console.WriteLine();
-            ShowAllDockerCommands();
+            BasicCommands();
         }
 
-        static void ShowAllDockerCommands()
+        static void BasicCommands()
         {
             Console.WriteLine();
             Console.WriteLine("Comandos Docker disponíveis:");

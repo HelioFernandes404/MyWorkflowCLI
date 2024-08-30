@@ -16,7 +16,7 @@ public class DocsCommand : ICommand
         switch (gitCommand)
         {
             case "all":
-                ShowDocs();
+                BasicCommands();
                 break;
             default:
                 Console.WriteLine(
@@ -33,10 +33,10 @@ public class DocsCommand : ICommand
             Console.WriteLine("Comandos Docs disponíveis:");
             Console.WriteLine("  all              Mostra todos os comandos Docs disponíveis");
             Console.WriteLine();
-            ShowDocs();
+            BasicCommands();
         }
 
-        static void ShowDocs()
+        static void BasicCommands()
         {
             // .NET documentation links
             string[] docLinks =

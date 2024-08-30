@@ -16,7 +16,7 @@ public class PsqlCommand : ICommand
         switch (sqlCommand)
         {
             case "all":
-                ShowAllSqlCommands();
+                BasicCommands();
                 break;
             default:
                 Console.WriteLine(
@@ -34,7 +34,7 @@ public class PsqlCommand : ICommand
             Console.WriteLine();
         }
 
-        static void ShowAllSqlCommands()
+        static void BasicCommands()
         {
             Console.WriteLine();
             Console.WriteLine("Comandos SQL (psql CLI) disponíveis:");

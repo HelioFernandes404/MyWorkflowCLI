@@ -19,7 +19,7 @@ public class LinuxCommand : ICommand
         switch (dockerCommand)
         {
             case "all":
-                ShowAllLinuxCommands();
+                BasicCommands();
                 break;
             default:
                 Console.WriteLine(
@@ -38,7 +38,7 @@ public class LinuxCommand : ICommand
             Console.WriteLine();
         }
 
-        static void ShowAllLinuxCommands()
+        static void BasicCommands()
         {
             Console.WriteLine();
             Console.WriteLine("Comandos Linux(Ubuntu) disponíveis:");

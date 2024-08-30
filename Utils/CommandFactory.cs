@@ -18,12 +18,9 @@ namespace MyWorkflow.Utils
                 "docs" => new DocsCommand(),
                 "vs" => new VsCommand(),
                 "mongoshell" => new MongoDbShell(),
+                "cp" => new CommitsPattern(),
                 _ => new DefaultCommand(),
             };
         }
     }
-
-
 }
-
-

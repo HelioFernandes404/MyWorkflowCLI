@@ -16,7 +16,7 @@ public class GitCommand : ICommand
         switch (GitCommand)
         {
             case "all":
-                ShowTop10GitCommands();
+                BasicCommands();
                 break;
             default:
                 Console.WriteLine(
@@ -35,7 +35,7 @@ public class GitCommand : ICommand
             Console.WriteLine();
         }
 
-        static void ShowTop10GitCommands()
+        static void BasicCommands()
         {
             Console.WriteLine();
             Console.WriteLine("Os 10 comandos Git mais usados:");
