@@ -2,7 +2,8 @@
 MyWorkflowCLI is a interface the line command ( CLI ) personalizade.
 create in python. There tools allow run and manager comandos pre-config the simples way. 
 
-## Features 
+## Features
+- to remember CLI ( CLI the commands)
 
 ## Stacks
 - Python
