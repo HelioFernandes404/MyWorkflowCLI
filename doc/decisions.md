@@ -2,6 +2,6 @@
 
 ## Decisions Log
 
-## [2025/07/10] init change language
+## [2025/07/10] init the refactor change language
 - use easy maintenance 
 - more completeness
