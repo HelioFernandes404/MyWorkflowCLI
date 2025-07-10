@@ -14,26 +14,3 @@
 [ ] - IA CLI
 [ ] - padrao de commits
 [ ] - CommitsPattern
-
-
-# 2. passar o projeto pra padrões de design / Factory Method ?
-
-
-```
-myworkflow/
-├── src/
-│   ├── Program.cs
-│   ├── Commands/
-│   │   ├── DockerCommand.cs
-│   │   ├── LinuxCommand.cs
-│   │   ├── PsqlCommand.cs
-│   │   ├── PmcCommand.cs
-│   │   ├── GitCommand.cs
-│   │   ├── DocsCommand.cs
-│   └── Utils/
-│       ├── CommandFactory.cs
-│       ├── ICommand.cs
-├── bin/
-├── obj/
-└── README.md
-```
