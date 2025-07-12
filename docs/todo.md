@@ -14,3 +14,4 @@
 [ ] - IA CLI
 [ ] - padrao de commits
 [ ] - CommitsPattern
+[ ] - setup.py
