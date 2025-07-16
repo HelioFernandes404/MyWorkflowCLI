@@ -1,17 +1,17 @@
-# 1. Todo
+# TODO - My Workflow CLI
 
-[ x ] - Comandos mais usados : Linux
-[ x ] - Comandos mais usados : Docker
-[ x ] - Comandos mais usados : PSQL Command
-[ x ] - When using the Package Manager Console (PMC)
-[ x ] - When using the .NET Command Line Interface (.NET CLI)
-[ x ] - Git
-[ x ] - Docs ?
-[ x ] - visual studio //TODO: Atualizar
-[ ]  - MongoDB Shell
+## To Do
 
+- [ ] Define new Command Line Interface features
+- [ ] Research best practices for CLI design
+- [ ] Create a list of required dependencies
 
-[ ] - IA CLI
-[ ] - padrao de commits
-[ ] - CommitsPattern
-[ ] - setup.py
+## In Progress
+
+- [ ] Prepare questions for 1:1 conversations
+- [ ] First round of 1:1 meetings
+
+## Done
+
+- [x] Kick-off meeting
+- [x] Created project workspace
