@@ -2,3 +2,6 @@ obj/
 bin/
 .vs/
 .vscode/
+venv/
+.venv/
+*__pycache__
