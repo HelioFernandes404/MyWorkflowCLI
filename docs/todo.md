@@ -1,0 +1,17 @@
+# 1. Todo
+
+[ x ] - Comandos mais usados : Linux
+[ x ] - Comandos mais usados : Docker
+[ x ] - Comandos mais usados : PSQL Command
+[ x ] - When using the Package Manager Console (PMC)
+[ x ] - When using the .NET Command Line Interface (.NET CLI)
+[ x ] - Git
+[ x ] - Docs ?
+[ x ] - visual studio //TODO: Atualizar
+[ ]  - MongoDB Shell
+
+
+[ ] - IA CLI
+[ ] - padrao de commits
+[ ] - CommitsPattern
+[ ] - setup.py
