@@ -21,11 +21,13 @@ class CommandFactory:
         from commands.help_command import HelpCommand
         from commands.default_command import DefaultCommand
         from commands.git_command import GitCommand
+        from commands.argocd_command import ArgoCdCommand
 
 
         command_map = {
             "-h": HelpCommand,
-            "git": GitCommand
+            "git": GitCommand,
+            "argocd": ArgoCdCommand
             # Add other commands here
         }
 

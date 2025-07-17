@@ -6,11 +6,12 @@ def show_help():
     print("Available commands:")
     print("-h: Show help")
     print("git: Git related commands")
+    print("agocd: Argocd related commands")
     # Add other commands here
 
 def main():
     """Main entry point for the CLI application"""
-    if len(sys.argv) < 2:
+    if len(sys.argv) <= 2:
         show_help()
         return
 
