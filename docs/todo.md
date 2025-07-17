@@ -6,6 +6,11 @@
 - [ ] Research best practices for CLI design
 - [ ] Create a list of required dependencies
 - [ ] Create feature new command for argocdcli, k8s, and helm, ssh, linux commands
+    - [x] argocdcli
+    - [ ] k8s
+    - [ ] helm
+    - [ ] ssh
+    - [ ] linux
 
 ## In Progress
 
