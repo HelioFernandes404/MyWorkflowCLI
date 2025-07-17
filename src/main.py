@@ -6,6 +6,7 @@ def show_help():
     print("Available commands:")
     print("-h: Show help")
     print("git: Git related commands")
+    print("agocd: Argocd related commands")
     # Add other commands here
 
 def main():
