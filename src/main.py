@@ -11,7 +11,7 @@ def show_help():
 
 def main():
     """Main entry point for the CLI application"""
-    if len(sys.argv) < 2:
+    if len(sys.argv) <= 2:
         show_help()
         return
 
