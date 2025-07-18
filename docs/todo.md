@@ -12,6 +12,10 @@
     - [ ] helm
     - [ ] ssh
     - [ ] linux
+    - [ ] python
+    - [ ] docker
+    - [ ] docker compose
+- [ ] Format commits messages
 
 ## In Progress
 
