@@ -1,12 +1,11 @@
-from typing import List
 from utils.command_factory import ICommand
 
 
 class GitCommand(ICommand):
-    def execute(self, args: List[str]) -> None:
+    def execute(self, args: list[str]) -> None:
         if len(args) > 1 and args[1] in ["use -h to show commands"]:
             return
-        
+
         print("Git Command Help")
         print("Usage: wk git [options]")
         print("Options:")

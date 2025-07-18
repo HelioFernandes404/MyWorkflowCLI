@@ -1,6 +1,8 @@
 # main.py
 import sys
+
 from utils.command_factory import CommandFactory
+
 
 def show_help():
     print("Available commands:")
@@ -8,6 +10,7 @@ def show_help():
     print("git: Git related commands")
     print("agocd: Argocd related commands")
     # Add other commands here
+
 
 def main():
     """Main entry point for the CLI application"""
@@ -21,13 +24,14 @@ def main():
     if command_handler is None:
         print(f"Command '{command}' not found. Use '-h' for help.")
         return
-    
+
     try:
         command_handler.execute(sys.argv[1:])
     except KeyboardInterrupt:
         print("\nProcess interrupted by user.")
     except Exception as e:
         print(f"An error occurred: {e}")
+
 
 if __name__ == "__main__":
     main()
