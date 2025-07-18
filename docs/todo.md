@@ -7,6 +7,7 @@
 - [ ] Create a list of required dependencies
 - [ ] Create feature new command for argocdcli, k8s, and helm, ssh, linux commands
     - [x] argocdcli
+    - [x] alias in my git config
     - [ ] k8s
     - [ ] helm
     - [ ] ssh
