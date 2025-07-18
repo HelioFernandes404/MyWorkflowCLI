@@ -1,5 +1,4 @@
-from setuptools import setup, find_packages
-
+from setuptools import find_packages, setup
 
 setup(
     name="myworkflow",
@@ -9,8 +8,8 @@ setup(
     author_email="heliodevhub@gmail.com",
     packages=find_packages(),
     entry_points={
-        'console_scripts': [
-            'myworkflow=main:main',
+        "console_scripts": [
+            "myworkflow=main:main",
         ],
     },
     python_requires=">=3.10",
