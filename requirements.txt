@@ -1,4 +1,4 @@
 typer==0.16.0
 commitizen
 pre-commit
-ruffs
+ruff==0.12.4
