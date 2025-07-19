@@ -6,4 +6,6 @@
 - use easy maintenance
 - more completeness
 
-## [2025/07/11] study off-trade the key differences between using Factory Pattern or Direct Command handling
+## [2025/07/18] implematiom the conversion the commits
+- use pre-commit for improve legibilidty
+- implamation cz to improve best formart commits
