@@ -23,4 +23,6 @@ class DockerCommand(ICommand):
         print("docker rmi <IMAGE> - Remove a Docker image")
         print("docker rm <CONTAINER> - Remove a stopped Docker container")
         print("docker logs <CONTAINER> - View logs of a Docker container")
-        print("docker exec -it <CONTAINER> <COMMAND> - Execute a command in a running Docker container")
+        print(
+            "docker exec -it <CONTAINER> <COMMAND> - Execute a command in a running Docker container"
+        )
