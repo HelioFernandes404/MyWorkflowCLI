@@ -21,6 +21,7 @@ class CommandFactory:
         # import commands here to avoid circular imports
         from commands.argocd_command import ArgoCdCommand
         from commands.default_command import DefaultCommand
+        from commands.docker_command import DockerCommand
         from commands.git_command import GitCommand
         from commands.help_command import HelpCommand
 
@@ -28,6 +29,7 @@ class CommandFactory:
             "-h": HelpCommand,
             "git": GitCommand,
             "argocd": ArgoCdCommand,
+            "docker": DockerCommand,
             # Add other commands here
         }
 
