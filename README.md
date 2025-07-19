@@ -21,11 +21,16 @@ pip install -r requirements.txt
 ```
 
 ## Usege
+- none
 
 ## Project Strcture
+- none
 
 ## Configuration
+- none
 
 ## Maintenance
+- none
 
 ## Notes
+- none
