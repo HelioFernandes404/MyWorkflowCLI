@@ -1,24 +1,16 @@
-# CLAUDE.md
+# MyWorkflow CLI
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+A Python-based CLI tool that provides convenient shortcuts for common development commands including Git, Docker, and ArgoCD operations.
 
-## Project Overview
+## 🚀 Quick Start
 
-MyWorkflowCLI is a Python-based CLI tool that provides shortcuts for common development commands. The application uses a command pattern with a factory to dynamically register and execute commands.
+### Installation
 
-## Architecture
-
-- **Entry point**: `src/main.py` - Main CLI entry point that parses arguments and delegates to command handlers
-- **Command Factory**: `src/utils/command_factory.py` - Factory pattern implementation with `ICommand` interface
-- **Commands**: `src/commands/` - Individual command implementations (git, docker, argocd, help, default)
-- **Execution pattern**: `python src/main.py <command> [options]`
-
-The CLI expects at least 2 arguments: the script name and a command. Commands are registered in the `CommandFactory.create_command()` method.
-
-## Development Commands
-
-### Setup
 ```bash
+# Clone the repository
+git clone <repository-url>
+cd MyWorkflowCLI
+
 # Create virtual environment
 python -m venv .venv
 source .venv/bin/activate  # Linux/Mac
@@ -27,31 +19,152 @@ source .venv/bin/activate  # Linux/Mac
 
 # Install dependencies
 pip install -r requirements.txt
+
+# Install the package locally
+pip install -e .
+```
+
+### Basic Usage
+
+```bash
+# Show available commands
+myworkflow
+
+# Get help for a specific command
+myworkflow git --help
+myworkflow docker --help
+myworkflow argocd --help
+```
+
+## 📋 Available Commands
+
+### Git Commands
+
+Streamlined Git workflow operations:
+
+```bash
+myworkflow git --status                    # Show git status
+myworkflow git --commit "commit message"   # Add and commit changes
+myworkflow git --stash push               # Stash current changes
+myworkflow git --stash list               # List all stashes
+myworkflow git --stash pop                # Apply latest stash
+myworkflow git --config-aliases           # Show git aliases
+```
+
+### Docker Commands
+
+Essential Docker operations made simple:
+
+```bash
+myworkflow docker build .                 # Build image from current directory
+myworkflow docker run nginx:latest       # Run a container
+myworkflow docker ps                      # List running containers
+myworkflow docker images                 # List available images
+myworkflow docker logs container_name    # View container logs
+myworkflow docker exec container_name bash  # Execute command in container
+myworkflow docker rm container_name      # Remove container
+myworkflow docker rmi image_name         # Remove image
+```
+
+### ArgoCD Commands
+
+ArgoCD application management:
+
+```bash
+myworkflow argocd login argocd.example.com     # Login to ArgoCD
+myworkflow argocd app list                     # List applications
+myworkflow argocd app get my-app               # Get app details
+myworkflow argocd app sync my-app              # Sync application
+myworkflow argocd app history my-app           # Show app history
+myworkflow argocd proj list                    # List projects
+```
+
+## 🛠️ Development
+
+### Setup Development Environment
+
+```bash
+# Install development dependencies
+pip install -r requirements.txt
+
+# Install pre-commit hooks (optional)
+pre-commit install
 ```
 
 ### Code Quality
+
+This project uses `ruff` for linting and formatting:
+
 ```bash
-# Lint with ruff
+# Check code quality
 ruff check src/
 
-# Format with ruff
+# Format code
 ruff format src/
 
 # Run pre-commit hooks
 pre-commit run --all-files
 ```
 
-### Installation
-```bash
-# Install package locally
-pip install -e .
+### Project Structure
 
-# Run CLI after installation
-myworkflow <command>
+```
+MyWorkflowCLI/
+├── src/
+│   ├── main.py              # CLI entry point
+│   ├── commands/            # Command implementations
+│   │   ├── git_command.py
+│   │   ├── docker_command.py
+│   │   ├── argocd_command.py
+│   │   └── ...
+│   └── utils/
+│       └── command_factory.py  # Command factory pattern
+├── docs/
+│   └── commands.md          # Detailed command documentation
+├── requirements.txt
+└── pyproject.toml          # Project configuration
 ```
 
-### Versioning
-Uses commitizen for conventional commits:
+## 📖 Documentation
+
+- **[Commands Documentation](docs/commands.md)** - Comprehensive guide to all available commands
+
+## 🤝 Contributing
+
+### Adding New Commands
+
+1. Create a new command class in `src/commands/` implementing the `ICommand` interface
+2. Add the command to the factory in `src/utils/command_factory.py`
+3. Update the help text in `src/main.py`
+4. Add documentation to `docs/commands.md`
+
+Example command structure:
+
+```python
+from utils.command_factory import ICommand
+import subprocess
+
+class MyCommand(ICommand):
+    def execute(self, args: list[str]) -> None:
+        if len(args) < 3:
+            self._show_help()
+            return
+        
+        option = args[2].lower()
+        
+        if option in ["--help", "-h"]:
+            self._show_help()
+        # Add your command logic here
+    
+    def _show_help(self):
+        print("My Command Help")
+        # Add help text here
+```
+
+### Commit Convention
+
+This project uses conventional commits:
+
 ```bash
 # Make a conventional commit
 cz commit
@@ -60,21 +173,84 @@ cz commit
 cz bump
 ```
 
-## Available Commands
+## 🧪 Testing
 
-- `git` - Git workflow shortcuts (status, commit, stash operations)
-- `docker` - Docker command references and shortcuts
-- `argocd` - ArgoCD related commands
-- `-h` - Help command
+```bash
+# Test basic functionality
+python src/main.py --help
+python src/main.py git --status
+python src/main.py docker ps
+```
 
-## Configuration
+## 🔧 Configuration
 
-- **Ruff**: Configured in `pyproject.toml` with Python 3.12 target, line length 88
-- **Commitizen**: Conventional commits with semantic versioning
-- **Pre-commit**: Hooks for code quality (configured but hooks file not visible)
+The CLI is configured through:
 
-## Adding New Commands
+- **Ruff**: Code formatting and linting (configured in `pyproject.toml`)
+- **Commitizen**: Conventional commits and versioning
+- **Pre-commit**: Code quality hooks
 
-1. Create new command class in `src/commands/` implementing `ICommand`
-2. Add import and mapping entry in `CommandFactory.create_command()`
-3. Update help text in `src/main.py` if needed
+## 📝 Examples
+
+### Daily Development Workflow
+
+```bash
+# Check current status
+myworkflow git --status
+
+# Stage and commit changes
+myworkflow git --commit "feat: add new authentication feature"
+
+# Build and test with Docker
+myworkflow docker build -t myapp:latest .
+myworkflow docker run --rm myapp:latest pytest
+
+# Deploy via ArgoCD
+myworkflow argocd app sync my-application
+```
+
+### Container Debugging
+
+```bash
+# Check running containers
+myworkflow docker ps
+
+# View logs
+myworkflow docker logs my-container
+
+# Access container shell
+myworkflow docker exec my-container bash
+
+# Clean up
+myworkflow docker rm $(docker ps -a -q --filter status=exited)
+```
+
+## 🐛 Troubleshooting
+
+### Common Issues
+
+1. **Command not found**: Make sure you've installed the package with `pip install -e .`
+2. **Permission errors**: Ensure your user has appropriate permissions for Docker/Git operations
+3. **ArgoCD login fails**: Check your server URL and credentials
+
+### Getting Help
+
+- Use `myworkflow <command> --help` for command-specific help
+- Check the [detailed documentation](docs/commands.md)
+- Review error messages for specific guidance
+
+## 📄 License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## 🚀 Roadmap
+
+Future enhancements planned:
+
+- [ ] Kubernetes (kubectl) commands
+- [ ] Helm operations
+- [ ] SSH connection management
+- [ ] Linux system commands
+- [ ] Docker Compose operations
+- [ ] Configuration file support
+- [ ] Command aliases and custom shortcuts
