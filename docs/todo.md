@@ -13,7 +13,7 @@
     - [ ] ssh
     - [ ] linux
     - [ ] python
-    - [ ] docker
+    - [x] docker
     - [ ] docker compose
 - [ ] Format commits messages
 
