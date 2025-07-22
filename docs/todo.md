@@ -1,7 +1,7 @@
 # TODO - My Workflow CLI
 
 ## To Do
-
+- [ ] Transform command in alias ( for exemple: docker image to docker img or docker i)
 - [ ] Define new Command Line Interface features
 - [ ] Research best practices for CLI design
 - [ ] Create a list of required dependencies
